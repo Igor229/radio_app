@@ -67,16 +67,16 @@ function Radio () {
                                     onError={setDeafaultSrc}
                                 />
                                 <div className="name">{station.name}</div>
-                                <AudioPlayer 
-                                    className="player" 
-                                    src={station.urlResolved}
-                                    showJumpControls={false}
-                                    layout='stacked'
-                                    customProgressBarSection={[]}
-                                    customControlsSection={['MAIN_CONTROLS', 'VOLUME_CONTROLS']}
-                                    autoPlayAfterSrcChange={false}
-                                />
                             </div>
+                            <AudioPlayer 
+                                className="player" 
+                                src={station.urlResolved}
+                                showJumpControls={false}
+                                layout='stacked'
+                                customProgressBarSection={[]}
+                                customControlsSection={['MAIN_CONTROLS', 'VOLUME_CONTROLS']}
+                                autoPlayAfterSrcChange={false}
+                                />
                         </div>
                     )
                 })}

@@ -1,38 +1,119 @@
-.App {
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background: rgb(131,58,180);
+  background: linear-gradient(36deg, rgba(131,58,180,1) 10%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
+  color: #fff;
+}
+
+h1 {
+  margin: 1em 0 0 0;
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin-bottom: 2em;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.radio {
+  max-width: 60em;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  font-size: 1.2rem;
+  width: 100%;
+
+  span {
+    margin: 0.25em;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 0.25em 0.75em;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(20deg, #e36bae, #fb743e);
+    }
+  }
+
+  .selected {
+    background: linear-gradient(20deg, #e36bae, #fb743e);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stations {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 100%;
+}
+
+.station {
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  margin: 0.25em;
+  border-radius: 10px;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &:hover {
+    background: linear-gradient(20deg, #e36bae, #fb743e);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.stationName {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0 0.25em;
+}
+
+.rhap_container.player {
+  display: flex;
+  justify-items: center;
+  padding: 0.25em 0.75em;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.rhap_stacked .rhap_controls-section {
+  margin-top: 0 !important;
+}
+
+.rhap_controls-section .rhap_volume-controls {
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .stations {
+    grid-template-columns: repeat(1, 100%);
   }
 }
