@@ -70,7 +70,7 @@ function Radio () {
                             </div>
                             <AudioPlayer 
                                 className="player" 
-                                src={station.urlResolved}
+                                src={station.url}
                                 showJumpControls={false}
                                 layout='stacked'
                                 customProgressBarSection={[]}
